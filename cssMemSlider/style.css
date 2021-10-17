@@ -1,0 +1,213 @@
+body {
+    background: linear-gradient(-147deg, #00abfc, #00fc71);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.wrapper {
+    width: 40%;
+    height: 60%;
+    margin: 8% auto;
+    border: 5px solid lightgray;
+}
+
+.div {
+    margin-top: 1em;
+}
+
+.text {
+    margin: 0% 1% auto;
+    font-size: 22px;
+    color: white;
+    opacity: 0;
+	position: relative;
+	z-index: 100000;
+	transition: all ease-in-out 0.5s, all ease-in-out 0.5s;
+    width: 5%; 
+    margin-top: 0%;
+}
+
+.text-wrapper {
+    height: 11%;
+    overflow: hidden;
+    position: fixed;
+    width: 400%;
+    display: flex;
+    margin: -1.7% -3% auto;
+    text-align: center;
+}
+
+.wrapper>.div>.controls {
+    margin: -61% 80% auto;;
+	position: sticky;
+    z-index: 100000000000;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper > input {
+	display: none;
+}
+
+.wrapper label {
+	cursor: pointer;
+	display: inline-block;
+	height: 0.8em;
+    margin: 61% 2% 1% 1%;
+	position: relative;
+	width: 0.8em;
+	border-radius: 50%;
+	transition: background ease-in-out 0.5s;
+}
+
+.wrapper label:hover, 
+#slide01:checked ~ .div > .controls label:nth-of-type(1),
+#slide02:checked ~ .div > .controls label:nth-of-type(2),
+#slide03:checked ~ .div > .controls label:nth-of-type(3),
+#slide04:checked ~ .div > .controls label:nth-of-type(4),
+#slide05:checked ~ .div > .controls label:nth-of-type(5) {
+	background: #ddd;
+}
+
+.wrapper label:after {
+	border: 3px solid #ddd;
+	content: " ";
+	display: block;
+	height: 1em;
+	position: relative;
+	width: 1em;
+	border-radius: 50%;
+    left: -35%;
+    top: -32%;
+    transition: 1s;
+}
+
+
+.slider {
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	width: 400%;
+    display: flex;
+}
+
+.slides {
+	opacity: 0;
+	position: relative;
+	z-index: 100000;
+	transition: all ease-in-out 0.5s, all ease-in-out 0.5s;
+    width: 100%;
+}
+
+.slide01 {
+    background-image: url(assets/slide01.png) ;
+    object-fit: cover;
+    background-size: 100% 100%;
+    width: 100%;
+}
+
+.slide02 {
+    background-image: url(assets/slide02.jpg);
+    left: -25%;
+    background-size: 100% 100%;
+}
+
+.slide03 {
+    background-image: url(assets/slide03.png);
+    background-size: 100% 100%;
+    left: -50%;
+}
+
+.slide04 {
+    background-image: url(assets/slide04.jpg);
+    background-size: 100% 100%;
+    left: -75%;
+} 
+
+.text01 {
+    left: -1%;
+}
+.text02 {
+    left: -8.8%;
+}
+.text03 {
+    left: -15.5%;
+}
+.text04 {
+    left: -23.3%;
+}
+
+#slide01:checked ~ .slider > .slide01,
+#slide02:checked ~ .slider > .slide02,
+#slide03:checked ~ .slider > .slide03,
+#slide04:checked ~ .slider > .slide04{
+	opacity: 1;
+	z-index: 1000000000;
+	transform: scale(1);
+}
+
+#slide01:checked ~ .div> .text-wrapper > .text01,
+#slide02:checked ~ .div> .text-wrapper > .text02,
+#slide03:checked ~ .div> .text-wrapper > .text03,
+#slide04:checked ~ .div> .text-wrapper > .text04{
+	opacity: 1;
+	z-index: 1000000000;
+	transform: scale(1);
+}
+
+
+@media screen and (max-width: 1150px) {
+
+.wrapper {
+    width: 61%;
+}
+    
+.text-wrapper {
+    margin: -2.7% -5% auto;
+}
+    
+}
+
+@media screen and (max-width: 900px) {
+        
+.wrapper {
+    width: 76%;
+}
+    
+.text-wrapper {
+    margin: -3.7% 0% auto;
+}
+
+}
+
+@media screen and (max-width: 536px) {
+
+.wrapper {
+    width: 78%;
+    height: 50%;
+    margin: 30% auto;
+}
+    
+.text-wrapper {
+    margin: 2.8% 27% auto;
+}
+    
+.wrapper>.div>.controls {
+    margin: -61% 34% auto;
+}
+    
+}
+    
+@media screen and (max-width: 450px) {
+    
+.wrapper {
+    width: 78%;
+    height: 44%;
+    margin: 40% auto;
+}
+
+}
