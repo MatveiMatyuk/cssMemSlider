@@ -158,3 +158,28 @@ body {
 	z-index: 1000000000;
 	transform: scale(1);
 }
+
+
+@media screen and (max-width: 1150px) {
+
+.wrapper {
+    width: 61%;
+}
+    
+.text-wrapper {
+    margin: -2.7% -5% auto;
+}
+    
+}
+
+@media screen and (max-width: 900px) {
+        
+.wrapper {
+    width: 76%;
+}
+    
+.text-wrapper {
+    margin: -3.7% 0% auto;
+}
+
+}
